@@ -1,0 +1,59 @@
+@import "globals";
+
+div.goal-progress {
+  width: 95%;
+  margin: 0 2.5%;
+  font-size: 3em;
+  position: absolute;
+  bottom: 3em;
+  display: flex;
+  align-items: center;
+  font-family: verdana;
+  justify-content: space-around;
+  text-shadow: 2px 2px 10px black;
+
+  progress {
+    flex-basis: 66%;
+    width: auto;
+    background-color: black;
+    height: .5em;
+  }
+
+  input {
+    background: none;
+    border: none;
+    position: relative;
+    color: white;
+    width: 1.7em;
+    font-size: 1em;
+    padding: 0;
+    left: 9px;
+    outline: none;
+    text-shadow: 2px 2px 10px black;
+    margin-left: 0.75em;
+  }
+
+  span {
+    width: 2em;
+    color: white;
+
+    &:not(#progressPercent) {
+      flex-basis: calc(33% - 4.45em)
+    }
+  }
+
+}
+
+progress::-webkit-progress-bar {
+  background-color: black;
+}
+
+progress::-webkit-progress-value {
+  background-color: $red;
+}
+
+@-moz-document url-prefix() {
+  progress {
+    display: none;
+  }
+}

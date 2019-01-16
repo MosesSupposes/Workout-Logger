@@ -1,0 +1,67 @@
+@import "globals";
+
+div.workout-routine-list {
+	padding: 30px;
+	height: calc(100% - 13em);
+	overflow-y: scroll;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	display: grid;
+	grid-template: 
+		"."
+		"filters"
+		"table"
+		"."
+		"."
+		".";
+
+	table {
+		border: .5rem solid $red;
+		box-shadow: 1px 1px 15px white;
+		grid-area: table;
+		border-top: none;
+		width: 100%;
+		background-color: rgba(255,255,255, .9);
+		font-family: verdana, sans-serif;
+		font-size: 1.5em;
+		text-align: center;
+		
+		caption {
+			border-left: .5rem solid $red;
+			border-right: .5rem solid $red;
+			background-color: white;
+			background-color: rgba(255,255,255, .9);
+			color: #8f2e32;
+		}
+
+		td {
+			padding: .2em;
+		}
+	}
+
+	nav.filters {
+		border: .5rem solid $red;
+		border-bottom: none;
+
+		width: 100%;
+		grid-area: filters;
+		background: $snow-white;
+		align-self: end;
+
+		ul {
+			align-self: end;
+			display: flex;
+			list-style: none;
+			justify-content: center;
+			
+		}
+
+		li {
+			padding-left: 1em;
+			font-weight: bold;
+			font-size: 1.15em;
+
+		}
+	}
+}

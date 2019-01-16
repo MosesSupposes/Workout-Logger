@@ -1,0 +1,105 @@
+@import "globals";
+
+div.workout-routine-count {
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	position: relative;
+	top: 1.75em;
+	flex-wrap: wrap;
+	font-size: 3em;
+	height: calc(70% - 3em);
+	// padding-top: 0.75rem;
+	// padding: 0 3.5rem;
+	background: $snow-white;
+	box-shadow: 1px 1px 15px white;
+
+	width: 80%;
+	margin: 0 auto;
+	border: .5rem solid $red;
+
+	> div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&.total-days {
+			flex-direction: column;
+			justify-content: baseline;
+			flex-basis: 100%;
+			font-size: 1.85em;
+			height: 180px;
+			background: $red;
+			margin-bottom: .35em;
+			text-shadow: 2px 2px 2px black;
+
+			
+			span, svg {
+				height: 110px;
+
+				&#streak {
+					height: auto;
+					font-size: .30em;
+					border-radius: 0;
+					background: none;
+					padding-right: 0;
+				}
+
+				&#totalDays {
+					border-radius: 0;
+					background: none;
+				}
+			}
+
+		}
+
+		&.goal {
+			font-size: 2.75em;
+		}
+		
+		&:not(.total-days) {
+			flex-basis: 50%;
+		}
+
+		span, svg {
+			background-color: $red;
+			color: white;
+			height: 100px;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+
+			&:first-child {
+				border-radius: 25px 0 0 25px;
+				padding-left: 15px;
+				text-shadow: 2px 2px 2px black;
+
+			}
+
+			&:last-child {
+				border-radius: 0 25px 25px 0;
+				font-size: .5em;
+				padding-left: 2px;
+				padding-right: 15px;
+			}
+
+		}
+
+		ul {
+			margin-top: 0;
+			list-style: none;
+		}
+	}
+}
+
+@media (max-height: 900px) {
+	div.workout-routine-count {
+		height: 68.5%;
+		align-content: flex-start;
+		position: initial;
+
+		> div.total-days {
+			margin-bottom: 0;
+		}
+	}
+}
