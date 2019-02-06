@@ -15,6 +15,6 @@
 ![preview](dist/assets/img/previews/WorkoutLoggerList.png)
 
 ## Tech Stack Used For Project
--React 
--Redux
--Node
+- React 
+- Redux
+- Node
