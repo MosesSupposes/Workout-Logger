@@ -13,3 +13,8 @@
 ![preview](dist/assets/img/previews/AddDayForm.png)
 
 ![preview](dist/assets/img/previews/WorkoutLoggerList.png)
+
+## Tech Stack Used For Project
+-React 
+-Redux
+-Node
